@@ -10,90 +10,86 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         .book-library {
             background-color: #ffffff;
-            max-width: 1200px;
+            width: 60%;
             margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2rem;
-            color: #333333;
-            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .book {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            background-color: #f9f9f9;
             margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 20px;
+        }
+
+        .book:last-child {
+            border-bottom: none;
         }
 
         .book img {
-            width: 120px;
+            max-width: 100%;
             height: auto;
             border-radius: 5px;
-            margin-right: 20px;
         }
 
-        .book-details {
-            flex: 1;
+        .book h3 {
+            font-size: 20px;
+            color: #333333;
+            margin: 10px 0 5px;
+            text-align: center;
         }
 
-        .book-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-
-        .book-author {
-            font-size: 1rem;
+        .book p {
+            font-size: 14px;
             color: #777777;
             margin: 5px 0;
         }
 
-        .book-price {
-            font-size: 1.1rem;
+        .price-block {
+            background-color: #2ecc71;
+            color: #ffffff;
+            font-size: 16px;
             font-weight: bold;
-            color: #2ecc71;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <h1>Book Library</h1>
     <div class="book-library">
-        <h1>Book Library</h1>
         <div class="book">
-            <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Spy-in-the-Amber-by-Manohar-Malgonkar.jpg" alt="Spy in the Amber">
-            <div class="book-details">
-                <h3 class="book-title">Spy in the Amber</h3>
-                <p class="book-author">Author: Manohar Malgonkar</p>
-                <p class="book-price">Price: ₹350</p>
-            </div>
+            <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Spy-in-the-Amber-by-Manohar-Malgonkar.jpg" alt="Spy in Amber">
+            <h3>SPY IN THE AMBER</h3>
+            <p>By Manohar Malgonkar</p>
+            <div class="price-block">Rs. 250</div>
         </div>
         <div class="book">
             <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Sacred-Games-by-Vikram-Chandra.jpg" alt="Sacred Games">
-            <div class="book-details">
-                <h3 class="book-title">Sacred Games</h3>
-                <p class="book-author">Author: Vikram Chandra</p>
-                <p class="book-price">Price: ₹499</p>
-            </div>
+            <h3>Sacred Games</h3>
+            <p>By Vikram Chandra</p>
+            <div class="price-block">Rs. 199</div>
         </div>
         <div class="book">
             <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
-            <div class="book-details">
-                <h3 class="book-title">Byomkesh Bakshi</h3>
-                <p class="book-author">Author: Sharadindu Bandyopadhyay</p>
-                <p class="book-price">Price: ₹299</p>
-            </div>
+            <h3>BYOMKESH BAKSHI</h3>
+            <p>By Sharadindu Bandyopadhyay</p>
+            <div class="price-block">Rs. 249</div>
         </div>
     </div>
 </body>
